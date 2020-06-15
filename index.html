@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/ca33be108d.js" crossorigin="anonymous"></script>
+    <title>Text Editor</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body class="text-center container">
+    <main>
+        <h1 class="banner p-3 text-primary">TextEditor</h1>
+        <div class="row">
+          <div class="col">
+
+            <!-- Font Styles and Text Align Selection-->
+            <button id="bold" type="button"  class="btn btn-light" onclick = "makeBold(bold);">Bold</button>
+            <button id="italic" type="button"  class="btn btn-light" onclick = "makeItalic(italic);">Italic</button>
+            <button id="underline" type="button"  class="btn btn-light" onclick = "makeUnderline(underline);">Underline</button>
+            <button id="left-align" type="button"  class="align btn btn-light"  onclick = "alignText('left');"><i class="fas fa-align-left"></i></button>
+            <button id="center-align" type="button"  class="align btn btn-light" onclick = "alignText('center');"><i class="fas fa-align-center"></i></button>
+            <button id="right-align" type="button"  class="align btn btn-light" onclick = "alignText('right');"><i class="fas fa-align-right"></i></button>
+            
+            <!-- Font Family Selection-->
+            <select name="font-family" id="font-family" onclick="fontFamilySelect()">
+              <option value="Arial">Arial</option>
+              <option value="Roboto">Roboto</option>
+              <option value="Bookman" selected>Bookman</option>
+              <option value="Times">Times</option>
+              <option value="Candara">Candara</option>
+              <option value="Courier">Courier</option>
+              <option value="Verdana">Verdana</option>
+              <option value="Georgia">Georgia</option>
+              <option value="Palatino">Palatino</option>
+              <option value="Garamond">Garamond</option>
+            </select>
+
+            <!-- Font Size Change -->
+            <select name="font-size" id="font-size" onclick="fontSizeSelect()">
+              <option value="10">10</option>
+              <option value="12">12</option>
+              <option value="14" selected>14</option>
+              <option value="16">16</option>
+              <option value="20">20</option>
+              <option value="25">25</option>
+              <option value="30">30</option>
+              <option value="40">40</option>
+              <option value="50">50</option>
+              <option value="60">60</option>
+            </select>
+
+            <!-- Select Font-color -->
+            <input name="font-color" id="font-color" type="color" onclick="fontColorSelect()">
+             
+          </div>
+        </div>
+        <hr />
+
+        <!-- Text Area to input and display -->
+        <div class="row editor">
+          <div class="col">
+            <div class="form-group">
+              <label for="text-input">Your Document Text</label>
+              <textarea class="form-control" id="text-input" rows="3" onkeyup="updateText()"></textarea>
+          </div>
+          </div>
+          <div class="col">
+            <label for="text-input">Formatted Text</label>
+            <div id="text-output" class="bg-light">
+            </div>
+          </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
