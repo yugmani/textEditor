@@ -35,10 +35,15 @@ function makeUnderline(elem){
 }
 
 // Toggle the style textAlign attribute
-function alignText(alignType){
+function alignText(elem, alignType){
   // CODE GOES HERE
+  // elem.classList.toggle("active");
   textOutputEl.style.textAlign= alignType;
-  
+  let buttonsList = document.getElementsByClassName("align");
+  buttonsList.forEach(btn => {
+    btn.classList.remove("active");
+  });
+  elem.classList.add("active");
 }
 
 //Function to change the FONT-SIZE

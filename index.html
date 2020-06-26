@@ -18,9 +18,9 @@
             <button id="bold" type="button"  class="btn btn-light" onclick = "makeBold(bold);">Bold</button>
             <button id="italic" type="button"  class="btn btn-light" onclick = "makeItalic(italic);">Italic</button>
             <button id="underline" type="button"  class="btn btn-light" onclick = "makeUnderline(underline);">Underline</button>
-            <button id="left-align" type="button"  class="align btn btn-light"  onclick = "alignText('left');"><i class="fas fa-align-left"></i></button>
-            <button id="center-align" type="button"  class="align btn btn-light" onclick = "alignText('center');"><i class="fas fa-align-center"></i></button>
-            <button id="right-align" type="button"  class="align btn btn-light" onclick = "alignText('right');"><i class="fas fa-align-right"></i></button>
+            <button id="left-align" type="button"  class="align btn btn-light"  onclick = "alignText(this, 'left');"><i class="fas fa-align-left"></i></button>
+            <button id="center-align" type="button"  class="align btn btn-light" onclick = "alignText(this, 'center');"><i class="fas fa-align-center"></i></button>
+            <button id="right-align" type="button"  class="align btn btn-light" onclick = "alignText(this, 'right');"><i class="fas fa-align-right"></i></button>
             
             <!-- Font Family Selection-->
             <select name="font-family" id="font-family" onclick="fontFamilySelect()">
